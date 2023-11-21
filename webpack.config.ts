@@ -13,7 +13,7 @@ export default (env: BuildEnvironment) => {
   const mode = env.mode || 'development';
   const PORT = env.port || 3000;
 
-  const isDev = process.env.NODE_ENV === 'development';
+  const isDev = true;
 
   const config: webpack.Configuration = buildWebpackConfig({
     mode,

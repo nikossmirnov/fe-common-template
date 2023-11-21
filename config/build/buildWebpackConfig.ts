@@ -7,11 +7,12 @@ import { BuildOptions } from "./types/config";
 
 export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration => {
     const { paths, mode, isDev } = options; 
+    console.log('isDev', isDev);
 return {
         mode: mode,
         entry: paths.entry,
         module: {
-            rules: buildLoaders(),
+            rules: buildLoaders(options),
         },
         resolve: buildResolvers(),
         output: {
