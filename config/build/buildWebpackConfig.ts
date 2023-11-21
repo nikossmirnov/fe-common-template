@@ -21,7 +21,7 @@ return {
             clean: true,
         },
         plugins: buildPlugins(paths.htmlTemplate),
-        devtool: isDev ? 'inline-source-map' : undefined,
-        devServer: isDev ? buildDevServer(options) : undefined, 
+        devtool: 'inline-source-map',
+        devServer: buildDevServer(options)  
 }};
 
