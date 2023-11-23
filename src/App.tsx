@@ -1,25 +1,19 @@
 import { Route, Routes } from 'react-router-dom';
 
-import { Suspense, useState } from 'react';
+import { Suspense } from 'react';
 import { Link } from 'react-router-dom';
+import { useTheme } from './hooks/useTheme';
 import AboutPageAsync from './pages/AboutPage/AboutPage.async';
 import MainPageAsync from './pages/MainPage/MainPage.async';
 import './styles/index.scss';
 
-export enum Theme {
-    Dark = 'dark',
-    Light = 'light',
-}
+
 
 export const App = () => {
-    const [theme, setTheme] = useState<Theme>(Theme.Dark);
-
-    const handleThemeChange = () => {
-        setTheme(theme === Theme.Dark ? Theme.Light : Theme.Dark);
-    };
+    const { theme, toggleTheme } = useTheme();
     return (
         <div className={`app ${theme}`}>
-            <button onClick={handleThemeChange}>Change theme</button>
+            <button onClick={toggleTheme}>Change theme</button>
             <Link to={"/"}>Main</Link>
             <Link to={"/about"}>About</Link>
                 <Suspense fallback={<div>Loading...</div>} >
