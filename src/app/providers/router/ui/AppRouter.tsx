@@ -12,7 +12,11 @@ export const AppRouter = (props: AppRouterProps) => {
                 <Route 
                     key={index} 
                     path={route.path} 
-                    element={route.Component} 
+                    element={
+                      <div className="page-wrapper">
+                        { route.Component }
+                      </div>
+                    } 
                 />
             ))}
         </Routes>

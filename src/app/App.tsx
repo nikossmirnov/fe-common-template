@@ -1,7 +1,7 @@
 
 import { classNames, useTheme } from '@/shared/index';
-import { ThemeSwitcher } from '@/widgets/ThemeSwitcher';
 import { Navbar } from '@/widgets/navbar';
+import { SideBar } from '@/widgets/sidebar';
 import { AppRouter } from './providers/router';
 import './styles/index.scss';
 
@@ -11,8 +11,10 @@ export const App = () => {
     return (
         <div className={classNames('app', {hovered: true}, [theme])}>
             <Navbar />
-            <AppRouter />
-            <ThemeSwitcher />
+            <div className='content-page'>
+                <SideBar />
+                <AppRouter />
+            </div>
         </div>
     );
 }
