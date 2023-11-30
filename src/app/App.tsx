@@ -2,6 +2,7 @@
 import { classNames, useTheme } from '@/shared/index';
 import { Navbar } from '@/widgets/navbar';
 import { SideBar } from '@/widgets/sidebar';
+import { Suspense } from 'react';
 import { AppRouter } from './providers/router';
 import './styles/index.scss';
 
@@ -10,11 +11,13 @@ export const App = () => {
 
     return (
         <div className={classNames('app', {hovered: true}, [theme])}>
-            <Navbar />
-            <div className='content-page'>
-                <SideBar />
-                <AppRouter />
-            </div>
+            <Suspense fallback={''} >
+                <Navbar />
+                <div className='content-page'>
+                    <SideBar />
+                    <AppRouter />
+                </div>
+            </Suspense>
         </div>
     );
 }
