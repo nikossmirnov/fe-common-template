@@ -1,5 +1,7 @@
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCSSExtractPlugin from "mini-css-extract-plugin";
+// import ReactRefreshWebpackPlugin from "react-refresh-webpack-plugin";
+// const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 import webpack from "webpack";
 import { BuildOptions } from "./types/config";
 
@@ -16,5 +18,6 @@ export const buildPlugins = ({paths, isDev}: BuildOptions): webpack.WebpackPlugi
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
         }),
+        //  new webpack.ReactRefreshWebpackPlugin(),
     ];
 };

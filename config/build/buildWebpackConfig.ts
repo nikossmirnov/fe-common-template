@@ -7,7 +7,6 @@ import { BuildOptions } from "./types/config";
 
 export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration => {
     const { paths, mode, isDev } = options; 
-    console.log('isDev', isDev);
 return {
         mode: mode,
         entry: paths.entry,
@@ -20,7 +19,7 @@ return {
             path: paths.output,
             clean: true,
         },
-        plugins: buildPlugins(paths.htmlTemplate),
+        plugins: buildPlugins(options),
         devtool: 'inline-source-map',
         devServer: buildDevServer(options)  
 }};
