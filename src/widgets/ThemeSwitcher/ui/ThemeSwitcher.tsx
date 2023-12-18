@@ -4,19 +4,20 @@ import DarkIcon from '@/shared/assets/icons/theme-dark.svg';
 import LightIcon from '@/shared/assets/icons/theme-light.svg';
 import { Button } from '@/shared/index';
 import styles from './ThemeSwitcher.module.scss';
+
 interface ThemeSwitcherProps {
-    className?: string;
+  className?: string;
 }
 
-export const ThemeSwitcher = ({className}: ThemeSwitcherProps) => {
-    const { theme, toggleTheme } = useTheme();
+export function ThemeSwitcher({ className }: ThemeSwitcherProps) {
+  const { theme, toggleTheme } = useTheme();
 
   return (
-    <Button 
-        className={classNames(styles.ThemeSwitcher, {}, [className])}
-        onClick={toggleTheme}
+    <Button
+      className={classNames(styles.ThemeSwitcher, {}, [className])}
+      onClick={toggleTheme}
     >
-        {theme === Theme.Dark ? <LightIcon /> : <DarkIcon />}
+      {theme === Theme.Dark ? <LightIcon /> : <DarkIcon />}
     </Button>
-  )
+  );
 }

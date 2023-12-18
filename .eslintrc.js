@@ -4,8 +4,8 @@ module.exports = {
     "es2021": true
   },
   "extends": [
-    "standard-with-typescript",
-    "plugin:react/recommended"
+    'airbnb',
+    'airbnb-typescript'
   ],
   "overrides": [
     {
@@ -21,15 +21,24 @@ module.exports = {
     }
   ],
   "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
+      project: './tsconfig.json'
   },
   "plugins": [
-    "react"
+    "react",
+    "i18next"
   ],
   "rules": {
-    "indent": [2, 4],
-    "react/jsx-indent": [2, 4],
-    "react'jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
+    "indent": [2],
+    "react/jsx-indent": [2],
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "i18next/no-literal-string": ["error", { markUpOnly: true }],
+    'import/prefer-default-export': 'off',
+    'no-unused-vars': 'warn',
+    "react/function-component-definition": "off",
+    'import/extensions': 'off',
+    'react/require-default-props': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'no-shadow': 'off',
   }
 }
