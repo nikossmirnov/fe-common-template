@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1701713772827" clover="3.2.0">
-  <project timestamp="1701713772827" name="All files">
-    <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1" elements="7" coveredelements="3" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
+<coverage generated="1702898068486" clover="3.2.0">
+  <project timestamp="1702898068486" name="All files">
+    <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3" elements="7" coveredelements="7" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
     <file name="classNames.ts" path="/Users/niko/Desktop/fe-common-template/src/shared/utils/classNames.ts">
-      <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <line num="3" count="1" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
-      <line num="12" count="0" type="stmt"/>
-      <line num="13" count="0" type="stmt"/>
+      <line num="7" count="4" type="stmt"/>
+      <line num="12" count="6" type="stmt"/>
+      <line num="13" count="4" type="stmt"/>
     </file>
   </project>
 </coverage>
